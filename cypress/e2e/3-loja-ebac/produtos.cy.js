@@ -7,43 +7,23 @@ describe('Funcionalidade: Produtos', () => {
     });
 
     it('Deve selecionar um produto da lista', () => {
-        cy.get('.product-block')
-            //.first()
-            //.last()
-            //.eq(2)
-            .contains('Arcadio Gym Short')
-            .click()
+        cy.get('.product-block').contains('Arcadio Gym Short').click()
         cy.get('.woocommerce-product-details__short-description > p').should('contain' , 'This is a variable product called a Arcadio Gym Short')
     });
 
     it('Deve selecionar um produto da lista', () => {
-        cy.get('.product-block')
-            .first()
-            //.last()
-            //.eq(2)
-            //.contains('Ariel Roll Sleeve Sweatshirt')
-            .click()
+        cy.get('.product-block').first().click()
         cy.get('.woocommerce-product-details__short-description > p').should('contain' , 'This is a variable product called a Abominable Hoodie')
     });
 
     it('Deve selecionar um produto da lista', () => {
-        cy.get('.product-block')
-            //.first()
-            .last()
-            //.eq(2)
-            //.contains('Ariel Roll Sleeve Sweatshirt')
-            .click()
+        cy.get('.product-block').last().click()
         cy.get('.woocommerce-product-details__short-description > p').should('contain' , 'This is a variable product called a Atlas Fitness Tank')
     });
 
     it('Deve selecionar um produto da lista', () => {
-        cy.get('.product-block')
-            //.first()
-            //.last()
-            .eq(2)
-            //.contains('Ariel Roll Sleeve Sweatshirt')
-            .click()
-            cy.get('.woocommerce-product-details__short-description > p').should('contain' , 'This is a variable product called a Aether Gym Pant')
+        cy.get('.product-block').eq(2).click()
+        cy.get('.woocommerce-product-details__short-description > p').should('contain' , 'This is a variable product called a Aether Gym Pant')
     });
 
     
