@@ -39,11 +39,14 @@ describe('Funcionalidade: Produtos', () => {
     });
 
     it('Deve visitar a página do produto', () => {
-        
+        produtosPage.visitarProduto('Argus All Weather Tank')
+        cy.get('.product_title').should('contain', 'Argus All-Weather Tank')
     });
 
-    it('Deve adicionar produto ao carrinho', () => {
-        
+    it.only('Deve adicionar produto ao carrinho', () => {
+        produtosPage.buscarProduto('Balboa Persistence Tee')
+        produtosPage.addProdutoCarrinho('M', 'Gray', 4)
+        cy.get('.woocommerce-message').should('contain', '4 × “Balboa Persistence Tee” foram adicionados no seu carrinho.')
     });
 
     
