@@ -1,9 +1,11 @@
 /// <reference types="cypress"/>
+import produtosPage from "../../support/page-objects/produtos.page";
 
 describe('Funcionalidade: Produtos', () => {
 
     beforeEach(() => {
-        cy.visit('produtos/')
+        
+        produtosPage.visitarUrl()
     });
 
     afterEach(() => {
@@ -11,8 +13,8 @@ describe('Funcionalidade: Produtos', () => {
     });
 
     it('Deve selecionar um produto da lista', () => {
-        cy.get('.product-block').contains('Arcadio Gym Short').click()
-        cy.get('.woocommerce-product-details__short-description > p').should('contain' , 'This is a variable product called a Arcadio Gym Short')
+        produtosPage.buscarProdutoLista('Aero Daily Fitness Tee')
+        cy.get('#tab-description > :nth-child(1)').should('contain' , 'Need an everyday action tee that helps keep you dry? The Aero Daily Fitness Tee is made of 100% polyester wicking knit that funnels moisture away from your skin.')
     });
 
     it('Deve selecionar um produto da lista', () => {
@@ -28,6 +30,20 @@ describe('Funcionalidade: Produtos', () => {
     it('Deve selecionar um produto da lista', () => {
         cy.get('.product-block').eq(2).click()
         cy.get('.woocommerce-product-details__short-description > p').should('contain' , 'This is a variable product called a Aether Gym Pant')
+    });
+
+    it('Deve buscar um produto com sucesso', () => {
+        let produto = 'Cassia Funnel Sweatshirt'
+        produtosPage.buscarProduto(produto)
+        cy.get('.product_title').should('contain' , produto)
+    });
+
+    it('Deve visitar a página do produto', () => {
+        
+    });
+
+    it('Deve adicionar produto ao carrinho', () => {
+        
     });
 
     
