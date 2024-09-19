@@ -45,6 +45,7 @@ describe('Funcionalidade: Produtos', () => {
 
     it('Deve adicionar produto ao carrinho', () => {
         produtosPage.buscarProduto('Balboa Persistence Tee')
+        cy.wait(100)
         produtosPage.addProdutoCarrinho('M', 'Gray', 4)
         cy.get('.woocommerce-message').should('contain', '4 × “Balboa Persistence Tee” foram adicionados no seu carrinho.')
     });
