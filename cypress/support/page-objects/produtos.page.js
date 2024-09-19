@@ -1,7 +1,7 @@
 class ProdutosPage {
 
     visitarUrl() {
-        cy.visit('produtos')
+        cy.visit('produtos/')
     }
 
     buscarProduto(nomeProduto) {

@@ -40,7 +40,7 @@ describe('Funcionalidade: Produtos', () => {
 
     it('Deve visitar a página do produto', () => {
         produtosPage.visitarProduto('Argus All Weather Tank')
-        cy.get('.product_title').should('contain', 'Argus All-Weather Tank')
+        cy.get('.product_title').should('contain' , 'Argus All-Weather Tank')
     });
 
     it.only('Deve adicionar produto ao carrinho', () => {
