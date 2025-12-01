@@ -25,7 +25,7 @@ git init
 
 git clone https://github.com/IsmaelGabrielDev/teste-ebac-ui.git
 
-cd testes-ebac-ui
+cd teste-ebac-ui
 ```
 
 ### Para instalar as pendiencias:
