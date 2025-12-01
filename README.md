@@ -23,9 +23,9 @@ Via terminal, rode os comandos:
 ```bash
 git init
 
-git clone https://github.com/IsmaelGabrielDev/testes-e2e-ebac.git
+git clone https://github.com/IsmaelGabrielDev/teste-ebac-ui.git
 
-cd testes-e2e-ebac
+cd testes-ebac-ui
 ```
 
 ### Para instalar as pendiencias:
