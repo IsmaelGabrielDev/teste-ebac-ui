@@ -56,6 +56,8 @@ npm init -y
 npm isntall
 
 nmp install cypress@13.6.0
+
+npm npm i @faker-js/faker
 ```
 ### Bibliotecas de apoio:
 
